@@ -217,11 +217,16 @@ input {
     border: solid 2px #e1e1e1;
 }
 
- .h1{
-     display: inline-block;
-  font-family: Roboto;
-     margin-left: 40%;
+.h1 {
+    display: inline-block;
+    font-family: Roboto;
+    margin-left: 40%;
     /* margin-right: 1px; */
     margin-top: 28%;
- }
+}
+
+.leaflet-container {
+    height: 400px;
+    width: 100%;
+}
 

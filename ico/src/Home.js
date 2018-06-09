@@ -3,38 +3,32 @@
  */
 import React, {Component} from "react";
 import './Home.css'
+import { render } from 'react-dom'
+import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
 
 
-class Home extends Component {
+ export default class Home extends Component {
+
+
 
 
     render() {
+        const position = [51.505, -0.09];
+
         return (
-            <div className="Rectangle-Copy-2">
-                <div className="Rectangle-4">
-                    <h2 className='Wallet'>Wallet</h2>
-                    <div>
-                        <input className="Rectangle-2-Copy-10 " list='languages'
-                               placeholder='0xa5b28931b3ee0cb7766dc95fa89c027a69d924e9'/>
-                        <datalist className="xa5b28931b3ee0cb776" id='languages'>
-                            <optionc value='0xa5b28931b3ee0cb7766dc95fa89c027a69d924e9'/>
-                        </datalist>
-                    </div>
-                    <div className='Rectangle-Copy'>
-                        <div>
-                            <b className="layer">0</b>
-                            <b className="-copy">0</b>
-                        </div>
-                        <div>
-                            <b className="ETHER-ON-CHAIN"><b className="fb">ETHER</b> ON-CHAIN</b>
-                            <b className="ETHER-OFF-CHAIN"><b className="fb">ETHER</b> OFF-CHAIN</b>
-                        </div>
-                        <input className="Rectangle-3-Copy" id="amount" placeholder="AMOUNT"/>
-                        <button color='yellow' id="button" className='DEPOSIT '>DEPOSIT</button>
-                    </div>
-                </div>
+            <div>
+                <Map center={position} zoom={13}>
+                    <TileLayer
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+                    />
+                    <Marker position={position}>
+                        <Popup>A pretty CSS3 popup.<br />Easily customizable.</Popup>
+                    </Marker>
+                </Map>
 
             </div>
+
 
 
         );
@@ -43,4 +37,3 @@ class Home extends Component {
 
 }
 
-export default Home
