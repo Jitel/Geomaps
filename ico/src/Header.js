@@ -1,7 +1,11 @@
-
+/**
+ * Created by jitel on 21.4.18.
+ */
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
 import "./Header.css";
+
+
 
 
 class Header extends Component {
@@ -12,7 +16,7 @@ class Header extends Component {
                 <div>
                     <nav>
                         <ul>
-                            <Link to="/"><img className="Group" src={group}/>
+                            <Link to="/">/>
                             </Link>
                             <Link to="/">
                                 <button className="Rectangle-5"><a className="Deposit">Deposit</a></button>
