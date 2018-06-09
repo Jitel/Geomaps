@@ -16,7 +16,7 @@ import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
         const position = [51.505, -0.09];
 
         return (
-            <div>
+            <div className="leaflet-marker-pane">
                 <Map center={position} zoom={13}>
                     <TileLayer
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
